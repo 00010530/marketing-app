@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="bot-cards">
-      <div class="bot-card" v-for="item in items" v-bind:key="item.id" >
+      <div class="bot-card" v-for="item in items" v-bind:key="item.id">
         <div class="card-date">
           <p class="card-bold">{{ item.time }}</p>
           <p class="card-reg">{{ item.date }}</p>
@@ -39,8 +39,8 @@ import { Edit, Delete } from "@element-plus/icons-vue";
 import { ref } from "vue";
 
 export default {
-  emits: ['marsBotAdd', 'marsBotDetail'],
-  setup(_, {emit}) {
+  emits: ["marsBotAdd", "marsBotDetail"],
+  setup(_, { emit }) {
     const items = ref({ activity: "" });
 
     function theData(url) {
@@ -57,19 +57,30 @@ export default {
       return items;
     }
 
-    const addBtnClick = () => {
-      emit('marsBotAdd')
-    }
+    const addBtnClick = (items, id) => {
+      emit("marsBotAdd");
+    };
 
     const botDetailsClick = () => {
-      emit('marsBotDetail')
+      emit("marsBotDetail");
+    };
+
+    function getById(items, id) {
+      return items.filter(function (o) {
+        return o.ID == id;
+      });
     }
 
     theData("http://localhost:3000/bot");
 
     return {
-      Edit, Delete,addBtnClick, items, botDetailsClick
-    }
+      Edit,
+      Delete,
+      addBtnClick,
+      items,
+      botDetailsClick,
+      getById
+    };
   },
 };
 </script>
@@ -90,7 +101,7 @@ export default {
 }
 
 .heading-right .el-button:hover {
-  background-color: #17233B;
+  background-color: #17233b;
   color: #fff;
 }
 
@@ -116,12 +127,12 @@ export default {
 }
 
 .bot-card:hover {
-  background-color: #E3391B;
+  background-color: #e3391b;
   color: #fff;
 }
 
 .bot-card:active {
-  background-color: #E3391B;
+  background-color: #e3391b;
   color: #fff;
 }
 
@@ -166,13 +177,18 @@ export default {
   font-size: 8px;
   font-family: Gilroy;
   font-weight: 400;
-  margin-top: 6px;
+  margin-top: 3px;
+  line-height: 9.6px;
 }
 
 .loc {
   display: flex;
   align-items: center;
   margin-top: 11px;
+}
+
+.loc img {
+  height: 10px;
 }
 
 .card-right {

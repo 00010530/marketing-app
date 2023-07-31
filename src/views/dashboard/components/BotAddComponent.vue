@@ -144,6 +144,10 @@ input {
   margin: 5px 71px 5px 23px;
 }
 
+.form .el-select .el-input__inner {
+  border: unset !important;
+}
+
 .form textarea {
   border-top: 0.2px #c6cad3 solid;
   border-right: none;
@@ -153,6 +157,7 @@ input {
   background: none;
   outline: none;
   padding: 10px;
+  resize: none;
 }
 
 .bot-add-footer{

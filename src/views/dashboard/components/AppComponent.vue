@@ -91,10 +91,6 @@ export default {
   gap: 71px;
 }
 
-/* .wrapper-left {
-  width: 60%; 
-} */
-
 .heading {
   padding-bottom: 42px;
 }
