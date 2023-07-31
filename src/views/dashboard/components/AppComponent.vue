@@ -7,7 +7,7 @@
         <div class="wrapper-left">
           <bot-component @marsBotDetail="getClickedEvent('botDetails')" @marsBotAdd="getClickedEvent('bot-add')"/>
           <div class="bottom">
-            <products-component />
+            <products-component @addProduct="getClickedEvent('add-product')"/>
             <news-component />
           </div>
         </div>

@@ -11,6 +11,13 @@ export default {
 
 
 <style>
+  @font-face {
+    font-family: "Gilroy";
+    src: local("Gilroy"),
+    url(./assets/fonts/Gilroy-Regular.ttf);
+  }
+
+
   * {
     margin: 0;
     padding: 0;

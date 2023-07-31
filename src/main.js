@@ -16,6 +16,7 @@ import SocialMediaComponent from "./views/dashboard/components/SocialMediaCompon
 import BotDetailsComponent from "./views/dashboard/components/BotDetailsComponent"
 import BotAddComponent from "./views/dashboard/components/BotAddComponent"
 import EditProductComponent from "./views/dashboard/components/EditProductComponent"
+import AddProductComponent from "./views/dashboard/components/AddProductComponent"
 
 const app = createApp(App);
 app.component('header-component', HeaderComponent)
@@ -29,6 +30,7 @@ app.component('social-component', SocialMediaComponent)
 app.component('botDetails-component', BotDetailsComponent)
 app.component('bot-add-component', BotAddComponent)
 app.component('edit-product-component', EditProductComponent)
+app.component('add-product-component', AddProductComponent)
 app.use(router);
 app.use(ElementPlus)
 app.use(VCalendar)

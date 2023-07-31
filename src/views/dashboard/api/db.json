@@ -34,6 +34,13 @@
             "img": "https://lab.marsit.uz/media/shop/Mars%20Earphones/Mars_earphone_1n4LcZO.png",
             "coins": 899,
             "ostatok": 6
+        },
+        {
+            "id": 5,
+            "name": "Mars Earphones",
+            "img": "https://lab.marsit.uz/media/shop/Mars%20Earphones/Mars_earphone_1n4LcZO.png",
+            "coins": 899,
+            "ostatok": 6
         }
     ],
     "bot": [

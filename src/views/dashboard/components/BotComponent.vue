@@ -89,6 +89,11 @@ export default {
   font-weight: 700;
 }
 
+.heading-right .el-button:hover {
+  background-color: #17233B;
+  color: #fff;
+}
+
 .heading-left {
   display: flex;
   align-items: center;
@@ -123,6 +128,16 @@ export default {
 .bot-card .el-button {
   border: none;
   color: #e3391b;
+  background-color: none;
+}
+
+.bot-card .el-button:nth-child(3) {
+  color: #898282;
+}
+
+.bot-card .el-button:hover {
+  background-color: #e3391b;
+  color: #fff;
 }
 
 .card-date {

@@ -25,17 +25,21 @@
 </div>
   <div class="card-footer">
       <p>Yangi Maxsulot qo'shish</p>
-      <el-button>+ Add</el-button>
+      <el-button @click="addProductBtnClick()">+ Add</el-button>
     </div>
   </section>
 </template>
 
-<script setup>
+<script>
 import { ref } from "vue";
 
-const products = ref({ activity: "" });
+export default {
+  emits: ['addProduct'],
+  setup(_, {emit}) {
+    const products = ref({ activity: "" });
 
-function theData(url) {
+
+    function theData(url) {
   fetch(url)
     .then((response) => response.json())
     .then((actualData) => {
@@ -49,7 +53,19 @@ function theData(url) {
   return products;
 }
 
+const addProductBtnClick = () => {
+      emit('addProduct')
+    }
+
 theData("http://localhost:3000/products");
+
+return {
+  products, addProductBtnClick
+}
+  }
+}
+
+
 </script>
 
 <style scoped>
